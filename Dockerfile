@@ -4,3 +4,4 @@ RUN sed -i 's/redirect_back_or_default project_time_entries_path(@time_entry.pro
 RUN sed -i 's/  general_csv_encoding: ISO-8859-1/  general_csv_encoding: UTF-8/g' /home/redmine/redmine/config/locales/en.yml
 # patch versions form - show status field ALWAYS
 COPY _form.html.erb /home/redmine/redmine/app/views/versions/_form.html.erb
+COPY show.api.rsb /home/redmine/redmine/app/views/projects/show.api.rsb
