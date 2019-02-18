@@ -1,4 +1,4 @@
-FROM sameersbn/redmine:3.4.2
+FROM sameersbn/redmine:3.4.4-2
 # patch irritating redirect after logging time to ticket
 RUN sed -i 's/redirect_back_or_default project_time_entries_path(@time_entry.project)/redirect_to issue_path(@time_entry.issue)/' /home/redmine/redmine/app/controllers/timelog_controller.rb
 RUN sed -i 's/  general_csv_encoding: ISO-8859-1/  general_csv_encoding: UTF-8/g' /home/redmine/redmine/config/locales/en.yml
