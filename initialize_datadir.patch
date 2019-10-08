@@ -1,0 +1,6 @@
+685,686c685,686
+<   chmod -R u+rw,go+r ${REDMINE_DATA_DIR}
+<   chown -R ${REDMINE_USER}: ${REDMINE_DATA_DIR}
+---
+>   chmod u+rw,go+r ${REDMINE_DATA_DIR}
+>   chown ${REDMINE_USER}: ${REDMINE_DATA_DIR}
