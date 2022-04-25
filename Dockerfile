@@ -1,4 +1,4 @@
-FROM sameersbn/redmine:4.2.4
+FROM sameersbn/redmine:5.0.0-1
 
 RUN sed -i 's/  general_csv_encoding: ISO-8859-1/  general_csv_encoding: UTF-8/g' /home/redmine/redmine/config/locales/en.yml
 
