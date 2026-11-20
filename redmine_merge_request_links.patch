@@ -1,14 +1,11 @@
-diff --git a/app/views/issues/show.html.erb b/app/views/issues/show.html.erb
-index 6c0018f..67e8f4e 100644
 --- a/app/views/issues/show.html.erb
 +++ b/app/views/issues/show.html.erb
-@@ -122,6 +122,8 @@ end %>
-
+@@ -149,6 +149,8 @@
  <%= render partial: 'action_menu_edit' if User.current.wants_comments_in_reverse_order? %>
-
- <div id="history">
+ 
+ <div id="history" class="journals">
 +<%= call_hook(:view_issues_show_after_details, :issue => @issue) %>
 +
  <%= render_tabs issue_history_tabs, issue_history_default_tab %>
  </div>
-
+ 
